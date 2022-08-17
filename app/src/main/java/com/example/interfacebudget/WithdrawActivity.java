@@ -14,10 +14,11 @@ public class WithdrawActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_withdraw);
-
+        //set balance textview with amount object
         TextView tV12 = findViewById(R.id.textView12);
         tV12.setText("$" + String.format("%.2f", MainActivity.amount.getBal()));
     }
+    //Button to update account balance and return to Main Activity
     public void enterWithdraw(View view) {
         EditText witText = (EditText) findViewById(R.id.editTextTextPersonName3);
         double wit = Double.parseDouble(String.valueOf(witText.getText()));

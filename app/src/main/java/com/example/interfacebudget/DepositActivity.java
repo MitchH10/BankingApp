@@ -15,14 +15,14 @@ public class DepositActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deposit);
-
+        //set balance textview with amount object
         TextView tV7 = findViewById(R.id.textView7);
         tV7.setText("$" + String.format("%.2f", MainActivity.amount.getBal()));
 
     }
 
 
-
+    //Button to update account balance and return to Main Activity
     public void enterDeposit(View view) {
         EditText depText = (EditText) findViewById(R.id.editTextTextPersonName);
         double dep = Double.parseDouble(String.valueOf(depText.getText()));
